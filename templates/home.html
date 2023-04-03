@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 500px;
+            padding: 50px;
+        }
+
+        h2 {
+            color: #666666;
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"] {
+            background-color: #f2f2f2;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .login {
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="login">
+        <h2>Diabetics Prediction</h2>
+        <form action="{{url_for('predict')}}" method="post">
+            <input type="text" name="Pregency" placeholder="Pregency" required = "required" />
+            <input type="text" name="Glucose" placeholder="Glucose" required = "required" />
+            <input type="text" name="BloodPressure" placeholder="BloodPressure" required = "required" />
+            <input type="text" name="SkinThikness" placeholder="SkinThikness" required = "required" />
+            <input type="text" name="Insulin" placeholder="Insulin" required = "required" />
+            <input type="text" name="BMI" placeholder="BMI" required = "required" />
+            <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required = "required" />
+            <input type="text" name="Age" placeholder="Age" required = "required" />
+
+            <button type="submit" class="btn btn-primery">Predict the data</button>
+        </form>
+    </div>
+    
+</body>
+</html>
