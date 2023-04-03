@@ -2,4 +2,12 @@
 Used ML Logistic Regression to create the model and use Flask to upload in webserver
 
 
-run: python application.py 
+## python application.py 
+Use this command in terminal to run the Flask server
+
+
+We used Libreries are:
+### flask
+### sklearn
+### pandas
+### numpy
