@@ -7,7 +7,7 @@ Use this command in terminal to run the Flask server
 
 
 We used Libreries are:
-### flask
-### sklearn
-### pandas
-### numpy
+- flask
+- sklearn
+- pandas
+- numpy
